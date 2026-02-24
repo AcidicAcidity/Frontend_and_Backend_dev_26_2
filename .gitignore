@@ -1,0 +1,64 @@
+# Зависимости Node.js
+**/node_modules/
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# Логи
+**/npm-debug.log
+**/yarn-error.log
+**/yarn-debug.log
+**/pnpm-debug.log
+**/logs/
+**/*.log
+
+# Переменные окружения
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Файлы редакторов
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Временные файлы
+**/tmp/
+**/temp/
+**/.cache/
+
+# Сборка и дистрибутивы
+**/dist/
+**/build/
+**/coverage/
+
+# Файлы конфигурации (если не нужно коммитить)
+**/config/local.js
+**/config/development.js
+
+
+# Тесты
+**/coverage/
+**/.nyc_output/
+**/junit.xml
+**/test-results/
+
+# Локальные конфигурации
+**/.vscode/
+**/.idea/
+**/.vs/
+**/*.code-workspace
