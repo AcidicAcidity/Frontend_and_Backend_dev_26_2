@@ -1,0 +1,54 @@
+$primary-color: #2c3e50;
+$border-radius: 12px;
+$shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+// Mixin for shadows
+@mixin card-shadow($light: true) {
+  @if $light {
+    box-shadow: $shadow-light;
+  } @else {
+    box-shadow: $shadow-hover;
+  }
+
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    @include card-shadow(false);
+  }
+}
+
+.product-card {
+  @include card-shadow(true);
+
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: $border-radius;
+  border: 1px solid #e1e5e9;
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: $border-radius;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 1.3em;
+    color: $primary-color;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+  }
+
+  &__description {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+} 
